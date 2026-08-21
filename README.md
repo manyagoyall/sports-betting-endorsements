@@ -21,5 +21,4 @@ citations in `FINDINGS.md` and the paper's reference list.
 ## Scope and limitations
 
 Three treated states, six events, and only 2-3 state clusters for standard errors. See
-`FINDINGS.md` for the full discussion, including how much the headline estimate depends
-on Colorado.
+`FINDINGS.md` for the full discussion
