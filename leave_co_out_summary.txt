@@ -1,0 +1,47 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             log_handle   R-squared:                       0.874
+Model:                            OLS   Adj. R-squared:                  0.841
+Method:                 Least Squares   F-statistic:                 2.780e+15
+Date:                Fri, 21 Aug 2026   Prob (F-statistic):           1.21e-08
+Time:                        13:59:24   Log-Likelihood:               0.059263
+No. Observations:                 110   AIC:                             47.88
+Df Residuals:                      86   BIC:                             112.7
+Df Model:                          23                                         
+Covariance Type:              cluster                                         
+=============================================================================================================================================
+                                                                                coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                    19.9448      0.022    900.017      0.000      19.901      19.988
+C(k_cat, Treatment(reference='ref'))[T.-2]                                   -0.0530      0.050     -1.053      0.293      -0.152       0.046
+C(k_cat, Treatment(reference='ref'))[T.-3]                                    0.0893      0.013      6.876      0.000       0.064       0.115
+C(k_cat, Treatment(reference='ref'))[T.-4]                                    0.1067      0.040      2.674      0.007       0.029       0.185
+C(k_cat, Treatment(reference='ref'))[T.-5]                                    0.0470      0.101      0.464      0.643      -0.152       0.245
+C(k_cat, Treatment(reference='ref'))[T.-6]                                   -0.0069      0.134     -0.051      0.959      -0.270       0.256
+C(k_cat, Treatment(reference='ref'))[T.0]                                     0.1118      0.068      1.650      0.099      -0.021       0.245
+C(k_cat, Treatment(reference='ref'))[T.1]                                     0.3063      0.034      8.942      0.000       0.239       0.373
+C(k_cat, Treatment(reference='ref'))[T.10]                                    0.2549      0.084      3.027      0.002       0.090       0.420
+C(k_cat, Treatment(reference='ref'))[T.11]                                    0.2603      0.017     15.129      0.000       0.227       0.294
+C(k_cat, Treatment(reference='ref'))[T.12]                                    0.3617      0.054      6.702      0.000       0.256       0.468
+C(k_cat, Treatment(reference='ref'))[T.2]                                     0.3962      0.025     16.124      0.000       0.348       0.444
+C(k_cat, Treatment(reference='ref'))[T.3]                                     0.3284      0.031     10.693      0.000       0.268       0.389
+C(k_cat, Treatment(reference='ref'))[T.4]                                     0.3357      0.080      4.216      0.000       0.180       0.492
+C(k_cat, Treatment(reference='ref'))[T.5]                                     0.2114      0.071      2.985      0.003       0.073       0.350
+C(k_cat, Treatment(reference='ref'))[T.6]                                     0.1369      0.097      1.415      0.157      -0.053       0.327
+C(k_cat, Treatment(reference='ref'))[T.7]                                     0.1210      0.032      3.771      0.000       0.058       0.184
+C(k_cat, Treatment(reference='ref'))[T.8]                                     0.2268      0.071      3.198      0.001       0.088       0.366
+C(k_cat, Treatment(reference='ref'))[T.9]                                     0.2294      0.109      2.102      0.036       0.016       0.443
+C(state_event)[T.AZ__Kevin Hart x DraftKings (2023-08)]                      -0.0097   1.27e-14  -7.61e+11      0.000      -0.010      -0.010
+C(state_event)[T.AZ__Peyton & Eli Manning x Caesars Sportsbook (2021-11)]    -0.2026      0.012    -17.500      0.000      -0.225      -0.180
+C(state_event)[T.AZ__Rob Gronkowski x FanDuel (2023-01)]                     -0.0534    1.9e-15  -2.81e+13      0.000      -0.053      -0.053
+C(state_event)[T.CT__Kevin Hart x DraftKings (2023-08)]                      -1.3305   4.33e-14  -3.08e+13      0.000      -1.330      -1.330
+C(state_event)[T.CT__Rob Gronkowski x FanDuel (2023-01)]                     -1.3887      3e-14  -4.63e+13      0.000      -1.389      -1.389
+==============================================================================
+Omnibus:                       31.350   Durbin-Watson:                   0.724
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):                7.148
+Skew:                          -0.248   Prob(JB):                       0.0280
+Kurtosis:                       1.854   Cond. No.                         20.9
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)

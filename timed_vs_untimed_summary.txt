@@ -1,0 +1,19 @@
+====================================================================================================
+TIMED-TO-MAJOR-EVENT vs. UNTIMED SPLIT
+====================================================================================================
+Timed events (Gronkowski/FanDuel, Kevin Hart/DraftKings, Jamie Foxx/BetMGM): 152 obs, 8 state-event units
+Untimed events (Barkley/FanDuel, Shaq/WynnBET, Mannings/Caesars): 72 obs, 4 state-event units
+
+Timed to major sporting event (N=152, 3 states, 8 state-event units)
+  post coefficient : +0.223
+  SE (cluster/state, 3 clusters): 0.006   p=0.000
+  SE (HC1, non-clustered)                : 0.047   p=0.000
+  implied handle change: 25.0%
+  R-squared: 0.825   df_resid: 143
+
+Not timed to major sporting event (N=72, 2 states, 4 state-event units)
+  post coefficient : +0.557
+  SE (cluster/state, 2 clusters): 0.080   p=0.000
+  SE (HC1, non-clustered)                : 0.118   p=0.000
+  implied handle change: 74.6%
+  R-squared: 0.512   df_resid: 67

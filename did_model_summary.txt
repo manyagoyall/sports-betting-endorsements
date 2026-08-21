@@ -1,0 +1,182 @@
+====================================================================================================
+(1) Basic
+====================================================================================================
+--- cluster-robust (by state) ---
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             log_handle   R-squared:                       0.737
+Model:                            OLS   Adj. R-squared:                  0.722
+Method:                 Least Squares   F-statistic:                     23.69
+Date:                Fri, 21 Aug 2026   Prob (F-statistic):             0.0397
+Time:                        13:57:59   Log-Likelihood:                -45.546
+No. Observations:                 224   AIC:                             117.1
+Df Residuals:                     211   BIC:                             161.4
+Df Model:                          12                                         
+Covariance Type:              cluster                                         
+=============================================================================================================================================
+                                                                                coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                    19.9059      0.050    400.698      0.000      19.808      20.003
+C(state_event)[T.AZ__Kevin Hart x DraftKings (2023-08)]                      -0.0097   3.98e-15  -2.43e+12      0.000      -0.010      -0.010
+C(state_event)[T.AZ__Peyton & Eli Manning x Caesars Sportsbook (2021-11)]    -0.2287      0.013    -17.263      0.000      -0.255      -0.203
+C(state_event)[T.AZ__Rob Gronkowski x FanDuel (2023-01)]                     -0.0534    9.3e-16  -5.74e+13      0.000      -0.053      -0.053
+C(state_event)[T.CO__Charles Barkley x FanDuel (2020-12)]                    -0.8927   1.18e-15  -7.54e+14      0.000      -0.893      -0.893
+C(state_event)[T.CO__Jamie Foxx x BetMGM (2023-09)]                          -0.2001   1.19e-15  -1.68e+14      0.000      -0.200      -0.200
+C(state_event)[T.CO__Kevin Hart x DraftKings (2023-08)]                      -0.2149   7.08e-15  -3.04e+13      0.000      -0.215      -0.215
+C(state_event)[T.CO__Peyton & Eli Manning x Caesars Sportsbook (2021-11)]    -0.4060   8.01e-15  -5.07e+13      0.000      -0.406      -0.406
+C(state_event)[T.CO__Rob Gronkowski x FanDuel (2023-01)]                     -0.2194   4.54e-15  -4.84e+13      0.000      -0.219      -0.219
+C(state_event)[T.CO__Shaquille O'Neal x WynnBET (2021-08)]                   -0.5060    3.6e-15  -1.41e+14      0.000      -0.506      -0.506
+C(state_event)[T.CT__Kevin Hart x DraftKings (2023-08)]                      -1.3305   1.37e-14  -9.73e+13      0.000      -1.330      -1.330
+C(state_event)[T.CT__Rob Gronkowski x FanDuel (2023-01)]                     -1.3887   1.88e-14  -7.37e+13      0.000      -1.389      -1.389
+post                                                                          0.3234      0.073      4.454      0.000       0.181       0.466
+==============================================================================
+Omnibus:                       47.934   Durbin-Watson:                   0.628
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              112.859
+Skew:                          -0.978   Prob(JB):                     3.11e-25
+Kurtosis:                       5.876   Cond. No.                         15.8
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+
+--- HC1 (non-clustered) ---
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             log_handle   R-squared:                       0.737
+Model:                            OLS   Adj. R-squared:                  0.722
+Method:                 Least Squares   F-statistic:                     59.66
+Date:                Fri, 21 Aug 2026   Prob (F-statistic):           5.42e-61
+Time:                        13:57:59   Log-Likelihood:                -45.546
+No. Observations:                 224   AIC:                             117.1
+Df Residuals:                     211   BIC:                             161.4
+Df Model:                          12                                         
+Covariance Type:                  HC1                                         
+=============================================================================================================================================
+                                                                                coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                    19.9059      0.060    332.172      0.000      19.788      20.023
+C(state_event)[T.AZ__Kevin Hart x DraftKings (2023-08)]                      -0.0097      0.074     -0.130      0.896      -0.155       0.136
+C(state_event)[T.AZ__Peyton & Eli Manning x Caesars Sportsbook (2021-11)]    -0.2287      0.083     -2.766      0.006      -0.391      -0.067
+C(state_event)[T.AZ__Rob Gronkowski x FanDuel (2023-01)]                     -0.0534      0.083     -0.645      0.519      -0.216       0.109
+C(state_event)[T.CO__Charles Barkley x FanDuel (2020-12)]                    -0.8927      0.137     -6.494      0.000      -1.162      -0.623
+C(state_event)[T.CO__Jamie Foxx x BetMGM (2023-09)]                          -0.2001      0.071     -2.828      0.005      -0.339      -0.061
+C(state_event)[T.CO__Kevin Hart x DraftKings (2023-08)]                      -0.2149      0.075     -2.858      0.004      -0.362      -0.068
+C(state_event)[T.CO__Peyton & Eli Manning x Caesars Sportsbook (2021-11)]    -0.4060      0.084     -4.862      0.000      -0.570      -0.242
+C(state_event)[T.CO__Rob Gronkowski x FanDuel (2023-01)]                     -0.2194      0.087     -2.520      0.012      -0.390      -0.049
+C(state_event)[T.CO__Shaquille O'Neal x WynnBET (2021-08)]                   -0.5060      0.077     -6.538      0.000      -0.658      -0.354
+C(state_event)[T.CT__Kevin Hart x DraftKings (2023-08)]                      -1.3305      0.072    -18.567      0.000      -1.471      -1.190
+C(state_event)[T.CT__Rob Gronkowski x FanDuel (2023-01)]                     -1.3887      0.091    -15.304      0.000      -1.567      -1.211
+post                                                                          0.3234      0.050      6.530      0.000       0.226       0.420
+==============================================================================
+Omnibus:                       47.934   Durbin-Watson:                   0.628
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              112.859
+Skew:                          -0.978   Prob(JB):                     3.11e-25
+Kurtosis:                       5.876   Cond. No.                         15.8
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+
+====================================================================================================
+(2) + state-event linear trend
+====================================================================================================
+--- cluster-robust (by state) ---
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             log_handle   R-squared:                       0.778
+Model:                            OLS   Adj. R-squared:                  0.752
+Method:                 Least Squares   F-statistic:                     25.93
+Date:                Fri, 21 Aug 2026   Prob (F-statistic):             0.0365
+Time:                        13:57:59   Log-Likelihood:                -26.278
+No. Observations:                 224   AIC:                             102.6
+Df Residuals:                     199   BIC:                             187.8
+Df Model:                          24                                         
+Covariance Type:              cluster                                         
+=================================================================================================================================================
+                                                                                    coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                        20.0118   3.26e-15   6.15e+15      0.000      20.012      20.012
+C(state_event)[T.AZ__Kevin Hart x DraftKings (2023-08)]                           0.0561    1.6e-15    3.5e+13      0.000       0.056       0.056
+C(state_event)[T.AZ__Peyton & Eli Manning x Caesars Sportsbook (2021-11)]        -0.2894      0.034     -8.547      0.000      -0.356      -0.223
+C(state_event)[T.AZ__Rob Gronkowski x FanDuel (2023-01)]                         -0.1225   4.19e-15  -2.92e+13      0.000      -0.122      -0.122
+C(state_event)[T.CO__Charles Barkley x FanDuel (2020-12)]                        -1.6603   3.73e-14  -4.45e+13      0.000      -1.660      -1.660
+C(state_event)[T.CO__Jamie Foxx x BetMGM (2023-09)]                              -0.1618   4.91e-15  -3.29e+13      0.000      -0.162      -0.162
+C(state_event)[T.CO__Kevin Hart x DraftKings (2023-08)]                          -0.1471   6.76e-15  -2.18e+13      0.000      -0.147      -0.147
+C(state_event)[T.CO__Peyton & Eli Manning x Caesars Sportsbook (2021-11)]        -0.5835   7.31e-15  -7.98e+13      0.000      -0.583      -0.583
+C(state_event)[T.CO__Rob Gronkowski x FanDuel (2023-01)]                         -0.3116    5.1e-15  -6.11e+13      0.000      -0.312      -0.312
+C(state_event)[T.CO__Shaquille O'Neal x WynnBET (2021-08)]                       -0.6202   9.14e-15  -6.78e+13      0.000      -0.620      -0.620
+C(state_event)[T.CT__Kevin Hart x DraftKings (2023-08)]                          -1.3627   6.31e-15  -2.16e+14      0.000      -1.363      -1.363
+C(state_event)[T.CT__Rob Gronkowski x FanDuel (2023-01)]                         -1.5474   1.93e-14  -8.01e+13      0.000      -1.547      -1.547
+post                                                                              0.3099      0.068      4.533      0.000       0.176       0.444
+C(state_event)[AZ__Jamie Foxx x BetMGM (2023-09)]:t_idx                          -0.0097      0.005     -2.067      0.039      -0.019      -0.001
+C(state_event)[AZ__Kevin Hart x DraftKings (2023-08)]:t_idx                      -0.0162      0.005     -3.473      0.001      -0.025      -0.007
+C(state_event)[AZ__Peyton & Eli Manning x Caesars Sportsbook (2021-11)]:t_idx    -0.0042      0.003     -1.321      0.186      -0.010       0.002
+C(state_event)[AZ__Rob Gronkowski x FanDuel (2023-01)]:t_idx                     -0.0028      0.005     -0.590      0.555      -0.012       0.006
+C(state_event)[CO__Charles Barkley x FanDuel (2020-12)]:t_idx                     0.0671      0.005     14.343      0.000       0.058       0.076
+C(state_event)[CO__Jamie Foxx x BetMGM (2023-09)]:t_idx                          -0.0135      0.005     -2.885      0.004      -0.023      -0.004
+C(state_event)[CO__Kevin Hart x DraftKings (2023-08)]:t_idx                      -0.0165      0.005     -3.517      0.000      -0.026      -0.007
+C(state_event)[CO__Peyton & Eli Manning x Caesars Sportsbook (2021-11)]:t_idx     0.0081      0.005      1.726      0.084      -0.001       0.017
+C(state_event)[CO__Rob Gronkowski x FanDuel (2023-01)]:t_idx                     -0.0004      0.005     -0.096      0.924      -0.010       0.009
+C(state_event)[CO__Shaquille O'Neal x WynnBET (2021-08)]:t_idx                    0.0018      0.005      0.374      0.708      -0.007       0.011
+C(state_event)[CT__Kevin Hart x DraftKings (2023-08)]:t_idx                      -0.0064      0.005     -1.378      0.168      -0.016       0.003
+C(state_event)[CT__Rob Gronkowski x FanDuel (2023-01)]:t_idx                      0.0062      0.005      1.326      0.185      -0.003       0.015
+==============================================================================
+Omnibus:                        9.902   Durbin-Watson:                   0.704
+Prob(Omnibus):                  0.007   Jarque-Bera (JB):               10.536
+Skew:                          -0.523   Prob(JB):                      0.00515
+Kurtosis:                       2.814   Cond. No.                         90.7
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+
+--- HC1 (non-clustered) ---
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             log_handle   R-squared:                       0.778
+Model:                            OLS   Adj. R-squared:                  0.752
+Method:                 Least Squares   F-statistic:                     32.09
+Date:                Fri, 21 Aug 2026   Prob (F-statistic):           1.42e-55
+Time:                        13:57:59   Log-Likelihood:                -26.278
+No. Observations:                 224   AIC:                             102.6
+Df Residuals:                     199   BIC:                             187.8
+Df Model:                          24                                         
+Covariance Type:                  HC1                                         
+=================================================================================================================================================
+                                                                                    coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                        20.0118      0.108    184.985      0.000      19.800      20.224
+C(state_event)[T.AZ__Kevin Hart x DraftKings (2023-08)]                           0.0561      0.156      0.359      0.720      -0.250       0.363
+C(state_event)[T.AZ__Peyton & Eli Manning x Caesars Sportsbook (2021-11)]        -0.2894      0.166     -1.746      0.081      -0.614       0.036
+C(state_event)[T.AZ__Rob Gronkowski x FanDuel (2023-01)]                         -0.1225      0.180     -0.679      0.497      -0.476       0.231
+C(state_event)[T.CO__Charles Barkley x FanDuel (2020-12)]                        -1.6603      0.307     -5.410      0.000      -2.262      -1.059
+C(state_event)[T.CO__Jamie Foxx x BetMGM (2023-09)]                              -0.1618      0.145     -1.116      0.264      -0.446       0.122
+C(state_event)[T.CO__Kevin Hart x DraftKings (2023-08)]                          -0.1471      0.145     -1.011      0.312      -0.432       0.138
+C(state_event)[T.CO__Peyton & Eli Manning x Caesars Sportsbook (2021-11)]        -0.5835      0.184     -3.176      0.001      -0.944      -0.223
+C(state_event)[T.CO__Rob Gronkowski x FanDuel (2023-01)]                         -0.3116      0.185     -1.686      0.092      -0.674       0.051
+C(state_event)[T.CO__Shaquille O'Neal x WynnBET (2021-08)]                       -0.6202      0.150     -4.136      0.000      -0.914      -0.326
+C(state_event)[T.CT__Kevin Hart x DraftKings (2023-08)]                          -1.3627      0.155     -8.809      0.000      -1.666      -1.059
+C(state_event)[T.CT__Rob Gronkowski x FanDuel (2023-01)]                         -1.5474      0.187     -8.258      0.000      -1.915      -1.180
+post                                                                              0.3099      0.071      4.372      0.000       0.171       0.449
+C(state_event)[AZ__Jamie Foxx x BetMGM (2023-09)]:t_idx                          -0.0097      0.011     -0.886      0.376      -0.031       0.012
+C(state_event)[AZ__Kevin Hart x DraftKings (2023-08)]:t_idx                      -0.0162      0.010     -1.620      0.105      -0.036       0.003
+C(state_event)[AZ__Peyton & Eli Manning x Caesars Sportsbook (2021-11)]:t_idx    -0.0042      0.016     -0.268      0.788      -0.035       0.026
+C(state_event)[AZ__Rob Gronkowski x FanDuel (2023-01)]:t_idx                     -0.0028      0.013     -0.214      0.830      -0.028       0.022
+C(state_event)[CO__Charles Barkley x FanDuel (2020-12)]:t_idx                     0.0671      0.021      3.122      0.002       0.025       0.109
+C(state_event)[CO__Jamie Foxx x BetMGM (2023-09)]:t_idx                          -0.0135      0.010     -1.294      0.196      -0.034       0.007
+C(state_event)[CO__Kevin Hart x DraftKings (2023-08)]:t_idx                      -0.0165      0.010     -1.698      0.090      -0.035       0.003
+C(state_event)[CO__Peyton & Eli Manning x Caesars Sportsbook (2021-11)]:t_idx     0.0081      0.013      0.630      0.529      -0.017       0.033
+C(state_event)[CO__Rob Gronkowski x FanDuel (2023-01)]:t_idx                     -0.0004      0.014     -0.033      0.974      -0.027       0.026
+C(state_event)[CO__Shaquille O'Neal x WynnBET (2021-08)]:t_idx                    0.0018      0.011      0.161      0.872      -0.020       0.023
+C(state_event)[CT__Kevin Hart x DraftKings (2023-08)]:t_idx                      -0.0064      0.010     -0.676      0.499      -0.025       0.012
+C(state_event)[CT__Rob Gronkowski x FanDuel (2023-01)]:t_idx                      0.0062      0.014      0.455      0.649      -0.020       0.033
+==============================================================================
+Omnibus:                        9.902   Durbin-Watson:                   0.704
+Prob(Omnibus):                  0.007   Jarque-Bera (JB):               10.536
+Skew:                          -0.523   Prob(JB):                      0.00515
+Kurtosis:                       2.814   Cond. No.                         90.7
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+
