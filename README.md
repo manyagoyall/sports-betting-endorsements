@@ -1,5 +1,5 @@
 
-## Running it
+## Python
 
 ```bash
 pip install -r requirements.txt
